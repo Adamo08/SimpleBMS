@@ -69,9 +69,6 @@ public class Bank {
         Account account = findAccount(accountNumber);
         if (account != null) {
             account.withdraw(amount);
-            System.out.println("=====================================================");
-            System.out.println("    Withdraw successful.");
-            System.out.println("=====================================================");
         } else {
             System.out.println("Account not found.");
         }
