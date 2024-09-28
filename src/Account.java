@@ -34,7 +34,9 @@ public class Account {
         }
 
         this.balance -= amount;
-        System.out.println("Withdrew: " + amount);
+        System.out.println("=====================================================");
+        System.out.println("    Withdraw successful.");
+        System.out.println("=====================================================");
 
     }
 
