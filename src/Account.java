@@ -22,7 +22,9 @@ public class Account {
             System.out.println("You can't deposit a negative amount");
         } else {
             this.balance += amount;
-            System.out.println("Deposited: " + amount);
+            System.out.println("=====================================================");
+            System.out.println("    Deposit successful: " + amount + " Was deposited.");
+            System.out.println("=====================================================");
         }
     }
 
