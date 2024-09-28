@@ -37,6 +37,9 @@ public class Bank {
         // Adding the account to the list of available accounts
         this.accounts.add(account);
 
+        // Display Accout creation message
+        displayAccountCreationMessage(customerName,accountNumber,depositAmount);
+
     }
 
     // Deposit to an account with the given account number
@@ -50,9 +53,6 @@ public class Bank {
         Account account = findAccount(accountNumber);
         if (account != null) {
             account.deposit(amount);
-            System.out.println("=====================================================");
-            System.out.println("    Deposit successful.");
-            System.out.println("=====================================================");
         } else {
             System.out.println("Account not found.");
         }
@@ -104,4 +104,19 @@ public class Bank {
     public ArrayList<Account> getAccounts() {
         return accounts;
     }
+
+    public void displayAccountCreationMessage(String customerName, int accountNumber, double depositAmount) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("================================================================================\n");
+        sb.append(String.format("%-20s : %s\n", "Customer Name", customerName));
+        sb.append(String.format("%-20s : %d\n", "Account Number", accountNumber));
+        sb.append(String.format("%-20s : %.2f\n", "Initial Deposit", depositAmount));
+        sb.append("--------------------------------------------------------------------------------\n");
+        sb.append("Account created successfully!\n");
+        sb.append("================================================================================");
+
+        System.out.println(sb.toString());
+    }
+
+
 }
